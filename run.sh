@@ -11,7 +11,7 @@ rm -rf "$TEMP_FILE" 2>/dev/null
 
 timecheck=$(date +%R)
 
-if [[ "$timecheck" == "10:08" ]]; then
+if [[ "$timecheck" == "00:00" ]]; then
     rm -rf "$RESULT_FILE" 2>/dev/null
 fi
 
