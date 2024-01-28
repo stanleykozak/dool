@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config=$(cat /persistent/dool/config.conf)
+config=$(cat /home/ubuntu/dool/config.conf)
 TEMP_FILE=$(echo "$config" | grep 'TEMP_FILE' | cut -d'=' -f2)
 RESULT_FILE=$(echo "$config" | grep 'RESULT_FILE' | cut -d'=' -f2)
 DOOL_PATH=$(echo "$config" | grep 'DOOL_PATH' | cut -d'=' -f2)
@@ -27,6 +27,7 @@ fi
 -t --blank \
 --uptime --blank \
 --systemd --blank \
+--updates --blank \
 --thermal \
 --output "$TEMP_FILE" 2 5
 
